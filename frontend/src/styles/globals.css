@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 214.3 31.8% 14.1%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 12 100% 42%;
+    --secondary-foreground: 210 40% 98%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.3% 65.1%;
+    --accent: 214.3 31.8% 14.1%;
+    --border: 217.2 32.6% 17.5%;
+    --radius: 1rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-[1rem] border border-border bg-muted/30 backdrop-blur-md p-4;
+  }
+
+  .btn {
+    @apply rounded-lg px-4 py-2 font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-muted;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "nexpanel",
+  "version": "0.1.0",
+  "description": "Modern ARM server management dashboard based on Cockpit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "start": "npm start --prefix backend",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "cockpit",
+    "arm",
+    "server",
+    "dashboard",
+    "linux",
+    "management"
+  ],
+  "author": "NexPanel Contributors",
+  "license": "LGPL-2.1-or-later",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  }
+}
